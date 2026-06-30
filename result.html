@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Loan Prediction Result</h1>
+
+    <h2>Customer Name: {{ name }}</h2>
+
+    <h2>{{ prediction }}</h2>
+
+    <br>
+
+    <a href="/">
+        <button>Back to Home</button>
+    </a>
+
+    <br><br>
+
+    <a href="/manager">
+        <button>Manager Dashboard</button>
+    </a>
+
+</div>
+
+</body>
+</html>

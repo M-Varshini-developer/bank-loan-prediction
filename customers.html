@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Customer List</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Customer Details</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+<th>Name</th>
+<th>Age</th>
+<th>Salary</th>
+<th>CIBIL</th>
+<th>Experience</th>
+<th>Employment</th>
+<th>EMI</th>
+<th>Loan Amount</th>
+<th>Bank Balance</th>
+<th>Dependents</th>
+<th>Prediction</th>
+
+</tr>
+
+{% for customer in customers %}
+
+<tr>
+
+<td>{{ customer.name }}</td>
+<td>{{ customer.age }}</td>
+<td>{{ customer.salary }}</td>
+<td>{{ customer.cibil }}</td>
+<td>{{ customer.experience }}</td>
+<td>{{ customer.employment_type }}</td>
+<td>{{ customer.existing_emi }}</td>
+<td>{{ customer.loan_amount_requested }}</td>
+<td>{{ customer.bank_balance }}</td>
+<td>{{ customer.dependents }}</td>
+<td>{{ customer.prediction }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">
+<button>Back</button>
+</a>
+
+</div>
+
+</body>
+</html>
